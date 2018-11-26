@@ -42,7 +42,7 @@ gem 'sanitize', '~> 3.0.3'
 gem 'therubyracer', git: 'https://github.com/cowboyd/therubyracer.git'
 
 group :production do
-   gem 'pg'
+   gem 'sqlite3'
  end
 
 
