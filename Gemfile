@@ -41,7 +41,7 @@ gem 'gemoji', '~> 2.1.0'
 gem 'sanitize', '~> 3.0.3'
 
 group :production do
-   gem 'pg'
+  gem 'pg', '~> 0.20.0'
    gem 'rails_12factor'
  end
 
