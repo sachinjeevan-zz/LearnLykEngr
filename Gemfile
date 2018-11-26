@@ -4,9 +4,9 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
-ruby '2.5.0'
+
 gem 'rails'
-gem 'sass-rails', '~> 3.2.0'
+gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 
@@ -39,10 +39,10 @@ gem 'html-pipeline',  '~> 1.11.0'
 gem 'github-markdown', '~> 0.6.7'
 gem 'gemoji', '~> 2.1.0'
 gem 'sanitize', '~> 3.0.3'
-
+gem 'therubyracer', git: 'https://github.com/cowboyd/therubyracer.git'
 
 group :production do
-   gem 'pg', '~> 0.18.1'
+   gem 'sqlite3'
  end
 
 
