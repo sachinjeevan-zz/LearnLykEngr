@@ -39,7 +39,8 @@ gem 'html-pipeline',  '~> 1.11.0'
 gem 'github-markdown', '~> 0.6.7'
 gem 'gemoji', '~> 2.1.0'
 gem 'sanitize', '~> 3.0.3'
-
+gem 'pg', '~> 0.20.0'
+   gem 'rails_12factor'
 group :production do
   gem 'pg', '~> 0.20.0'
    gem 'rails_12factor'
