@@ -39,10 +39,9 @@ gem 'html-pipeline',  '~> 1.11.0'
 gem 'github-markdown', '~> 0.6.7'
 gem 'gemoji', '~> 2.1.0'
 gem 'sanitize', '~> 3.0.3'
-gem 'therubyracer', git: 'https://github.com/cowboyd/therubyracer.git'
 
 group :production do
-   gem 'sqlite3'
+   gem 'pg'
  end
 
 

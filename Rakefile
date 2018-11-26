@@ -6,7 +6,9 @@
 
 begin
    
-    
+  require_relative 'config/application'
+   
+    Rails.application.load_tasks
 rescue LoadError => e
     raise e unless ENV['RAILS_ENV'] == "production"
     
