@@ -39,9 +39,17 @@ gem 'html-pipeline',  '~> 1.11.0'
 gem 'github-markdown', '~> 0.6.7'
 gem 'gemoji', '~> 2.1.0'
 gem 'sanitize', '~> 3.0.3'
+<<<<<<< HEAD
 
 group :production do
    gem 'pg'
+=======
+gem 'therubyracer', git: 'https://github.com/cowboyd/therubyracer.git'
+gem 'pg'
+group :production do
+   gem 'pg'
+   gem ' rails_12factor'
+>>>>>>> 67543cc7b6fc867e6c7e4938aadc9003742ac898
  end
 
 
