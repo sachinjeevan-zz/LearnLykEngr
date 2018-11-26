@@ -43,6 +43,7 @@ gem 'therubyracer', git: 'https://github.com/cowboyd/therubyracer.git'
 gem 'pg'
 group :production do
    gem 'pg'
+   gem ' rails_12factor'
  end
 
 
