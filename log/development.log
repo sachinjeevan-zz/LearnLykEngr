@@ -4157,3 +4157,316 @@ Processing by ProjectController#index as HTML
   Rendered shared/_message.html.erb (1.0ms)
   Rendered shared/_footer.html.erb (0.0ms)
 Completed 200 OK in 3195ms (Views: 3189.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2018-11-25 02:41:19 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectController#index as HTML
+  [1m[35mProject Load (1.0ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered project/index.html.erb within layouts/application (145.8ms)
+Warning. Error encountered while saving cache 2d05da18e2387fff3e5f5c15e786980ba567dc83/active_skin.sassc: can't dump hash with default proc
+
+Warning. Error encountered while saving cache 2d05da18e2387fff3e5f5c15e786980ba567dc83/active_skin.sassc: can't dump hash with default proc
+
+  Rendered shared/_header.html.erb (24.0ms)
+  Rendered shared/_message.html.erb (4.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 203748ms (Views: 203616.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for ::1 at 2018-11-25 02:46:13 +0530
+Processing by ProjectController#index as HTML
+  [1m[36mProject Load (0.0ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered project/index.html.erb within layouts/application (8.0ms)
+  Rendered shared/_header.html.erb (4.0ms)
+  Rendered shared/_message.html.erb (0.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 3787ms (Views: 3784.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-8dd3905207d0327ed94c3e37b3525bf633d36967f1110da2a4f57d7e261b5f79.css?body=1" for ::1 at 2018-11-25 02:46:17 +0530
+
+
+Started GET "/login" for ::1 at 2018-11-26 09:22:23 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered shared/_devisemes.html.erb (2417.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3561.3ms)
+  Rendered shared/_header.html.erb (0.0ms)
+  Rendered shared/_message.html.erb (0.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 9706ms (Views: 9325.9ms | ActiveRecord: 84.0ms)
+
+
+Started POST "/login" for ::1 at 2018-11-26 09:22:47 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VFMcnCBUGpo1hqNCsXmeBCANDEc8cWFE9JRkiSo0MucsGsFCnkuTNYIC3JTa7AhB1H+MeM4A5AqST5XQZeA2gA==", "user"=>{"email"=>"sachinjeevan2506@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (28.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "sachinjeevan2506@gmail.com"]]
+Completed 401 Unauthorized in 304ms (ActiveRecord: 28.0ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VFMcnCBUGpo1hqNCsXmeBCANDEc8cWFE9JRkiSo0MucsGsFCnkuTNYIC3JTa7AhB1H+MeM4A5AqST5XQZeA2gA==", "user"=>{"email"=>"sachinjeevan2506@gmail.com", "password"=>"[FILTERED]"}}
+  Rendered shared/_devisemes.html.erb (0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (104.0ms)
+  Rendered shared/_header.html.erb (0.0ms)
+  Rendered shared/_message.html.erb (0.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 3603ms (Views: 3390.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2018-11-26 09:22:59 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z8liuqhuAjMCyR92W3UAoWZy6YSDhkZBW0IRLdcMkUsfgL9kFnGLnLVNYKAw4JbkkgBpu3H3ww89meB0mNiVLA==", "user"=>{"email"=>"sachinjeevan2506@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "sachinjeevan2506@gmail.com"]]
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z8liuqhuAjMCyR92W3UAoWZy6YSDhkZBW0IRLdcMkUsfgL9kFnGLnLVNYKAw4JbkkgBpu3H3ww89meB0mNiVLA==", "user"=>{"email"=>"sachinjeevan2506@gmail.com", "password"=>"[FILTERED]"}}
+  Rendered shared/_devisemes.html.erb (0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (100.0ms)
+  Rendered shared/_header.html.erb (0.0ms)
+  Rendered shared/_message.html.erb (0.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 3415ms (Views: 3239.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for ::1 at 2018-11-26 09:23:04 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered shared/_devisemes.html.erb (0.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (88.0ms)
+  Rendered shared/_header.html.erb (4.0ms)
+  Rendered shared/_message.html.erb (0.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 3339ms (Views: 3332.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for ::1 at 2018-11-26 09:23:20 +0530
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OMW71kC4ePWprPXjuxbj4rGm52vol345ZAaKxoB6wg1AjGYI/qfxWh4oijXQg3WnRdRnVBrm+3cC3Xufz67Gag==", "user"=>{"name"=>"sachinjeevan", "email"=>"sachinjeevan2506@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'sachinjeevan2506@gmail.com' LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["confirmation_token", "2e154c939f122eeeb006004bdf105fce0992d14d637dc9990be778bd734acf33"]]
+  [1m[36mSQL (40.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "sachinjeevan"], ["email", "sachinjeevan2506@gmail.com"], ["encrypted_password", "$2a$11$l1oPJ.TbjCvV7knp.M7GpuK998VPDn96jDVuey6Wh1Tfx4IURBxJW"], ["created_at", "2018-11-26 03:53:20.860222"], ["updated_at", "2018-11-26 03:53:20.860222"], ["confirmation_token", "2e154c939f122eeeb006004bdf105fce0992d14d637dc9990be778bd734acf33"], ["confirmation_sent_at", "2018-11-26 03:53:21.464014"]]
+  Rendered devise/mailer/confirmation_instructions.html.erb (4.0ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 3730.7ms
+
+Sent mail to sachinjeevan2506@gmail.com (6433.8ms)
+Date: Mon, 26 Nov 2018 09:23:25 +0530
+From: sachinjeevan2506@gmail.com
+Reply-To: sachinjeevan2506@gmail.com
+To: sachinjeevan2506@gmail.com
+Message-ID: <5bfb6e35a9932_28b07eb5d94106f@DESKTOP-L1A8UKD.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome sachinjeevan2506@gmail.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/confirmation?confirmation_token=HfsWNGG8zzhgyKWo3mi8">Confirm my account</a></p>
+
+  [1m[35m (163.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 12716ms (ActiveRecord: 203.9ms)
+
+
+Started GET "/" for ::1 at 2018-11-26 09:23:33 +0530
+Processing by ProjectController#index as HTML
+  [1m[36mProject Load (0.0ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered project/index.html.erb within layouts/application (4.0ms)
+  Rendered shared/_header.html.erb (4.0ms)
+  Rendered shared/_message.html.erb (0.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 2847ms (Views: 2843.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/confirmation?confirmation_token=HfsWNGG8zzhgyKWo3mi8" for ::1 at 2018-11-26 09:23:48 +0530
+Processing by Devise::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>"HfsWNGG8zzhgyKWo3mi8"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["confirmation_token", "2e154c939f122eeeb006004bdf105fce0992d14d637dc9990be778bd734acf33"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.0ms)[0m  UPDATE "users" SET "confirmation_token" = ?, "confirmed_at" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["confirmation_token", nil], ["confirmed_at", "2018-11-26 03:53:49.121178"], ["updated_at", "2018-11-26 03:53:49.125187"], ["id", 1]]
+  [1m[36m (72.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/login
+Completed 302 Found in 108ms (ActiveRecord: 76.0ms)
+
+
+Started GET "/login" for ::1 at 2018-11-26 09:23:49 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered shared/_devisemes.html.erb (0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (80.0ms)
+  Rendered shared/_header.html.erb (0.0ms)
+  Rendered shared/_message.html.erb (0.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 3339ms (Views: 3334.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2018-11-26 09:24:02 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E74SmyjFacPykDuDmT/sQ0mniJ68ca6dJNgDHviVhbRr989FltrgbEUURFXyqnoGvdUIoU4AK9NCA/JHt0GB0w==", "user"=>{"email"=>"sachinjeevan2506@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "sachinjeevan2506@gmail.com"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (24.0ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2018-11-26 03:54:03.132877"], ["current_sign_in_at", "2018-11-26 03:54:03.132877"], ["last_sign_in_ip", "::1"], ["current_sign_in_ip", "::1"], ["sign_in_count", 1], ["updated_at", "2018-11-26 03:54:03.136878"], ["id", 1]]
+  [1m[36m (163.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1475ms (ActiveRecord: 187.9ms)
+
+
+Started GET "/" for ::1 at 2018-11-26 09:24:04 +0530
+Processing by ProjectController#index as HTML
+  [1m[35mProject Load (0.0ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered project/index.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (4.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_header.html.erb (16.0ms)
+  Rendered shared/_message.html.erb (0.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 2979ms (Views: 2973.3ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/myprojects" for ::1 at 2018-11-26 09:24:20 +0530
+Processing by ProjectController#list as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "projects" INNER JOIN "subscriptions" ON "projects"."id" = "subscriptions"."project_id" WHERE "subscriptions"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered project/list.html.erb within layouts/application (12.0ms)
+  Rendered shared/_header.html.erb (4.0ms)
+  Rendered shared/_message.html.erb (0.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 3527ms (Views: 2971.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-11-26 09:24:29 +0530
+Processing by ProjectController#index as HTML
+  [1m[35mProject Load (0.0ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered project/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_header.html.erb (8.0ms)
+  Rendered shared/_message.html.erb (0.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 2855ms (Views: 2853.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/myprojects" for ::1 at 2018-11-26 09:24:37 +0530
+Processing by ProjectController#list as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (4.0ms)[0m  [1mSELECT COUNT(*) FROM "projects" INNER JOIN "subscriptions" ON "projects"."id" = "subscriptions"."project_id" WHERE "subscriptions"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered project/list.html.erb within layouts/application (8.0ms)
+  Rendered shared/_header.html.erb (4.0ms)
+  Rendered shared/_message.html.erb (0.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 2827ms (Views: 2813.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/myprojects" for ::1 at 2018-11-26 09:26:39 +0530
+Processing by ProjectController#list as HTML
+  [1m[35mUser Load (4.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "projects" INNER JOIN "subscriptions" ON "projects"."id" = "subscriptions"."project_id" WHERE "subscriptions"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered project/list.html.erb within layouts/application (8.0ms)
+  Rendered shared/_header.html.erb (4.0ms)
+  Rendered shared/_message.html.erb (0.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 2819ms (Views: 2810.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for ::1 at 2018-11-26 09:26:46 +0530
+Processing by ProjectController#index as HTML
+  [1m[35mProject Load (0.0ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered project/index.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_header.html.erb (8.0ms)
+  Rendered shared/_message.html.erb (0.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 2691ms (Views: 2687.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/myprojects" for ::1 at 2018-11-26 09:26:52 +0530
+Processing by ProjectController#list as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "projects" INNER JOIN "subscriptions" ON "projects"."id" = "subscriptions"."project_id" WHERE "subscriptions"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered project/list.html.erb within layouts/application (8.0ms)
+  Rendered shared/_header.html.erb (4.0ms)
+  Rendered shared/_message.html.erb (0.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 2563ms (Views: 2556.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/profile" for ::1 at 2018-11-26 09:26:58 +0530
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_devisemes.html.erb (0.0ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (92.0ms)
+  Rendered shared/_header.html.erb (0.0ms)
+  Rendered shared/_message.html.erb (0.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 3287ms (Views: 3278.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/profile" for ::1 at 2018-11-26 09:28:58 +0530
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (4.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_devisemes.html.erb (0.0ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (96.0ms)
+  Rendered shared/_header.html.erb (0.0ms)
+  Rendered shared/_message.html.erb (0.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 3771ms (Views: 3765.2ms | ActiveRecord: 4.0ms)
+
+
+Started PUT "/" for ::1 at 2018-11-26 09:29:24 +0530
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BiRHOtLkYRSsJ/+O4xj/kt02exVPV/AT/pPLwMD790gEPKG8CQR63XukpzWV1cB/lIv56s4/sdECB9zKOvMTRw==", "user"=>{"name"=>"sachinjeevan", "email"=>"sachinjeevan2506@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (4.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Unpermitted parameter: password_confirmation
+  Rendered shared/_devisemes.html.erb (0.0ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (76.0ms)
+  Rendered shared/_header.html.erb (0.0ms)
+  Rendered shared/_message.html.erb (0.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 4938ms (Views: 3436.4ms | ActiveRecord: 4.0ms)
+
+
+Started PUT "/" for ::1 at 2018-11-26 09:29:49 +0530
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pvMBdWyh9ez9XiU6et6YtqC21S+bEyZO2MyGhIO0nHuk6+fzt0HuJSrdfYEME6db6QtX0Bp7Z4wkWJGOebx4dA==", "user"=>{"name"=>"sachinjeevan", "email"=>"sachinjeevan2506@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Unpermitted parameter: password_confirmation
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (4.0ms)[0m  [1mUPDATE "users" SET "encrypted_password" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["encrypted_password", "$2a$11$.sNBJs8i84Rxckp4khc0d.kFYJ8VmAbAMdcKZBKC423lIu1imgNXW"], ["updated_at", "2018-11-26 03:59:50.248288"], ["id", 1]]
+  [1m[35m (108.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 1543ms (ActiveRecord: 112.0ms)
+
+
+Started GET "/" for ::1 at 2018-11-26 09:29:51 +0530
+Processing by ProjectController#index as HTML
+  [1m[36mProject Load (4.0ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered project/index.html.erb within layouts/application (4.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_header.html.erb (8.0ms)
+  Rendered shared/_message.html.erb (0.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 2511ms (Views: 2502.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/profile" for ::1 at 2018-11-26 09:31:53 +0530
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_devisemes.html.erb (0.0ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (88.0ms)
+  Rendered shared/_header.html.erb (4.0ms)
+  Rendered shared/_message.html.erb (0.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 3795ms (Views: 3785.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-11-26 09:32:05 +0530
+Processing by ProjectController#index as HTML
+  [1m[35mProject Load (0.0ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered project/index.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_header.html.erb (16.0ms)
+  Rendered shared/_message.html.erb (0.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 2647ms (Views: 2642.7ms | ActiveRecord: 0.0ms)
