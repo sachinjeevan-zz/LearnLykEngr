@@ -113,7 +113,6 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
     margin: 0 0 20px 0;
     padding: 0;
     box-shadow: none;
-    box-sizing: content-box;
     transition: all 0.3s;
     padding-left: 10px;
 }
@@ -280,7 +279,7 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
     margin-bottom: 20px;
 }
 hr {
-    box-sizing: content-box;
+    
     height: 0;
     border-color: rgba(228, 228, 228, 0.13);
 }
@@ -588,7 +587,7 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
     margin: 0 0 20px 0;
     padding: 0;
     box-shadow: none;
-    box-sizing: content-box;
+    
     transition: all 0.3s;
     padding-left: 10px;
 }
