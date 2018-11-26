@@ -40,7 +40,7 @@ gem 'github-markdown', '~> 0.6.7'
 gem 'gemoji', '~> 2.1.0'
 gem 'sanitize', '~> 3.0.3'
 gem 'therubyracer', git: 'https://github.com/cowboyd/therubyracer.git'
-
+gem 'pg'
 group :production do
    gem 'pg'
  end
