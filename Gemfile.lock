@@ -315,7 +315,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  active_admin-sortable_tree (~> 0.2.1)
+  active_admin-sortable_tree
   active_skin
   activeadmin (~> 1.0.0.pre4)
   aws-sdk (~> 2.3)

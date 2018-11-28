@@ -4305,3 +4305,7 @@ Completed 200 OK in 153786ms (Views: 153641.6ms | ActiveRecord: 1.0ms)
 
 
 Started GET "/assets/application.self-ca82c2b13e762a20792dec9d5371615b9ce5e02cd7af718464a6ffb27cb3c7c9.css?body=1" for ::1 at 2018-11-28 14:17:48 +0530
+Warning. Error encountered while saving cache 2d05da18e2387fff3e5f5c15e786980ba567dc83/active_skin.sassc: can't dump hash with default proc
+
+Warning. Error encountered while saving cache 2d05da18e2387fff3e5f5c15e786980ba567dc83/active_skin.sassc: can't dump hash with default proc
+
