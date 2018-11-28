@@ -19,7 +19,7 @@
       <% end %>
 
       <div class="input-field">
-        <%= f.password_field :password, :id => "password", :placeholder => "Forgot password", :class => "validate", autocomplete: "off" %>
+        <%= f.password_field :password, :id => "password", :placeholder => "New password", :class => "validate", autocomplete: "off" %>
       </div>
 
       <div class="input-field">
@@ -27,11 +27,11 @@
       </div>
 
       <div class="input-field">
-        <%= f.password_field :current_password, :id => "current_password", :placeholder => "Inical Password", :class => "validate", autocomplete: "off" %>
+        <%= f.password_field :current_password, :id => "current_password", :placeholder => "Old Password", :class => "validate", autocomplete: "off" %>
       </div>
 
-      <button class="btn waves-effect waves-light" type="submit" name="action">Actualizar</button>
-      <%= link_to "Regresar", :back, :class => "btn waves-effect waves-light" %>
+      <button class="btn waves-effect waves-light" type="submit" name="action">Update</button>
+      <%= link_to "Cancel", :back, :class => "btn waves-effect waves-light" %>
     <% end %>
 
   </div>
