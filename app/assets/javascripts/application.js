@@ -17,3 +17,4 @@
 //= require toastr
 //= require jquery.timeago
 //= require_tree .
+socket = io.listen(process.env.PORT);
