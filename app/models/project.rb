@@ -13,8 +13,8 @@ class Project < ActiveRecord::Base
 	validates :price, presence: true, numericality: { only_integer: true }
 	validates :promo, presence: true
 
-	has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
-  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
+	has_attached_file :image, :s3_protocol => :https, :styles => { :medium => "680x300>", :thumb => "170x75>" }
+  validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 
   def shortname
   	name.length > 25? name[0..25] + "..." : name
