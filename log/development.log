@@ -4956,3 +4956,197 @@ Completed 200 OK in 3055ms (Views: 2779.8ms | ActiveRecord: 0.0ms)
   [1m[36mAdminUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "admin_users" WHERE "admin_users"."email" = 'sachinjeevan2506@gmail.com' LIMIT 1[0m
   [1m[35mSQL (0.0ms)[0m  INSERT INTO "admin_users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "sachinjeevan2506@gmail.com"], ["encrypted_password", "$2a$11$6EleB6TPCQk4prpCG98AE.Wa/ph0XR.Wk86WznQjKm7YQvEkBC1fe"], ["created_at", "2018-11-28 13:34:29.614047"], ["updated_at", "2018-11-28 13:34:29.614047"]]
   [1m[36m (125.0ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/admin/login" for ::1 at 2018-11-28 19:07:09 +0530
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/devise/shared/_links.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (319.9ms)
+Completed 200 OK in 2359ms (Views: 2199.2ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/admin/login" for ::1 at 2018-11-28 19:07:21 +0530
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JPWXRdDrvyE3PwnXBubxpFCAfd4DvlKIk7E3bZx7MkAZ0PYM53U463UzDRXteQlIPa0+4oakYoEptdft85CitQ==", "admin_user"=>{"email"=>"sachinjeevan2506@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[35mAdminUser Load (4.0ms)[0m  SELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ?  ORDER BY "admin_users"."id" ASC LIMIT 1  [["email", "sachinjeevan2506@gmail.com"]]
+  [1m[36m (4.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.0ms)[0m  UPDATE "admin_users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "admin_users"."id" = ?  [["last_sign_in_at", "2018-11-28 13:37:21.686525"], ["current_sign_in_at", "2018-11-28 13:37:21.686525"], ["last_sign_in_ip", "::1"], ["current_sign_in_ip", "::1"], ["sign_in_count", 1], ["updated_at", "2018-11-28 13:37:21.694521"], ["id", 1]]
+  [1m[36m (151.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 2839ms (ActiveRecord: 163.9ms)
+
+
+Started GET "/admin" for ::1 at 2018-11-28 19:07:24 +0530
+Processing by Admin::DashboardController#index as HTML
+  [1m[35mAdminUser Load (4.0ms)[0m  SELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ?  ORDER BY "admin_users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/page/index.html.arb (1411.5ms)
+Completed 200 OK in 1827ms (Views: 1670.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/admin/projects" for ::1 at 2018-11-28 19:07:28 +0530
+Processing by Admin::ProjectsController#index as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ?  ORDER BY "admin_users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (4.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "projects" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36mTask Load (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  [1m[35mSubscription Load (0.0ms)[0m  SELECT "subscriptions".* FROM "subscriptions"
+  [1m[36mUser Load (4.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (1995.3ms)
+Completed 200 OK in 2619ms (Views: 2545.7ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/admin/projects/new" for ::1 at 2018-11-28 19:07:34 +0530
+Processing by Admin::ProjectsController#new as HTML
+  [1m[35mAdminUser Load (0.0ms)[0m  SELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ?  ORDER BY "admin_users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb (2591.1ms)
+Completed 500 Internal Server Error in 3403ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `image?' for #<Project:0x79c0260>):
+    1: insert_tag renderer_for(:new)
+  app/admin/project.rb:22:in `block (3 levels) in <top (required)>'
+  app/admin/project.rb:17:in `block (2 levels) in <top (required)>'
+
+
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (20.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (4994.3ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (3490.8ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (9172.9ms)
+
+
+Started GET "/admin/projects/" for ::1 at 2018-11-28 19:16:54 +0530
+Processing by Admin::ProjectsController#index as HTML
+  [1m[36mAdminUser Load (4.0ms)[0m  [1mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ?  ORDER BY "admin_users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (4.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "projects" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36mTask Load (4.0ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  [1m[35mSubscription Load (0.0ms)[0m  SELECT "subscriptions".* FROM "subscriptions"
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (2291.2ms)
+Completed 200 OK in 3199ms (Views: 2982.6ms | ActiveRecord: 28.0ms)
+
+
+Started GET "/admin/projects/new" for ::1 at 2018-11-28 19:17:01 +0530
+Processing by Admin::ProjectsController#new as HTML
+  [1m[35mAdminUser Load (0.0ms)[0m  SELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ?  ORDER BY "admin_users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb (2403.2ms)
+Completed 200 OK in 3195ms (Views: 3154.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/tasks" for ::1 at 2018-11-28 19:17:12 +0530
+Processing by Admin::TasksController#index as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ?  ORDER BY "admin_users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tasks" LIMIT 10000 OFFSET 0) subquery_for_count
+  [1m[36mProject Load (0.0ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (1567.5ms)
+Completed 200 OK in 2067ms (Views: 2053.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/tasks/new" for ::1 at 2018-11-28 19:17:17 +0530
+Processing by Admin::TasksController#new as HTML
+  [1m[35mAdminUser Load (4.0ms)[0m  SELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ?  ORDER BY "admin_users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProject Load (0.0ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb (2463.2ms)
+Completed 200 OK in 3359ms (Views: 3324.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/admin/projects" for ::1 at 2018-11-28 19:17:23 +0530
+Processing by Admin::ProjectsController#index as HTML
+  [1m[35mAdminUser Load (4.0ms)[0m  SELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ?  ORDER BY "admin_users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "projects" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35mTask Load (0.0ms)[0m  SELECT "tasks".* FROM "tasks"
+  [1m[36mSubscription Load (4.0ms)[0m  [1mSELECT "subscriptions".* FROM "subscriptions"[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users"
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (1695.4ms)
+Completed 200 OK in 2459ms (Views: 2438.8ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/admin" for ::1 at 2018-11-28 19:35:32 +0530
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ?  ORDER BY "admin_users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/page/index.html.arb (2235.2ms)
+Completed 200 OK in 2479ms (Views: 2467.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/projects" for ::1 at 2018-11-28 19:35:37 +0530
+Processing by Admin::ProjectsController#index as HTML
+  [1m[35mAdminUser Load (4.0ms)[0m  SELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ?  ORDER BY "admin_users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "projects" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35mTask Load (4.0ms)[0m  SELECT "tasks".* FROM "tasks"
+  [1m[36mSubscription Load (0.0ms)[0m  [1mSELECT "subscriptions".* FROM "subscriptions"[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users"
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (2371.2ms)
+Completed 200 OK in 3171ms (Views: 3151.9ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/admin/projects/new" for ::1 at 2018-11-28 19:35:42 +0530
+Processing by Admin::ProjectsController#new as HTML
+  [1m[36mAdminUser Load (0.0ms)[0m  [1mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ?  ORDER BY "admin_users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb (2259.2ms)
+Completed 200 OK in 3039ms (Views: 3027.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/projects" for ::1 at 2018-11-28 19:36:09 +0530
+Processing by Admin::ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pBFkvGfYkOLKbImoTRnoesKtVZL8+T59RLEGBh0ful5XQJwS6IY3fbVIXhWcQYzAggJU2LHvS4d3F2/sCfj4wg==", "project"=>{"name"=>"C-Programming", "content"=>"hfiowehfiheiuhf", "price"=>"2500", "promo"=>"save100", "image"=>#<ActionDispatch::Http::UploadedFile:0x59b16d0 @tempfile=#<Tempfile:C:/Users/SACHIN~1/AppData/Local/Temp/RackMultipart20181128-580-176tcp9.jpg>, @original_filename="c_coaching_classes_surat_ciytlight_piplod.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"project[image]\"; filename=\"c_coaching_classes_surat_ciytlight_piplod.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Project"}
+  [1m[35mAdminUser Load (0.0ms)[0m  SELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ?  ORDER BY "admin_users"."id" ASC LIMIT 1  [["id", 1]]
+Command :: file -b --mime "C:/Users/SACHIN~1/AppData/Local/Temp/3207b66e88bcc363efbd66357827d24120181128-580-1jjnxz7.jpg"
+[paperclip] Content Type Spoof: Filename c_coaching_classes_surat_ciytlight_piplod.jpg (image/jpeg from Headers, ["image/jpeg"] from Extension), content type discovered from file command: . See documentation to allow this combination.
+  [1m[36m (4.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mProject Exists (0.0ms)[0m  SELECT  1 AS one FROM "projects" WHERE ("projects"."id" IS NOT NULL) AND "projects"."slug" = ? LIMIT 1  [["slug", "c-programming"]]
+Command :: file -b --mime "C:/Users/SACHIN~1/AppData/Local/Temp/3207b66e88bcc363efbd66357827d24120181128-580-d5uemh.jpg"
+[paperclip] Content Type Spoof: Filename c_coaching_classes_surat_ciytlight_piplod.jpg (image/jpeg from Headers, ["image/jpeg"] from Extension), content type discovered from file command: . See documentation to allow this combination.
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb (1735.4ms)
+Completed 200 OK in 4850ms (Views: 2267.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/system/projects/images//original/c_coaching_classes_surat_ciytlight_piplod.jpg?1543413969" for ::1 at 2018-11-28 19:36:14 +0530
+
+ActionController::RoutingError (No route matches [GET] "/system/projects/images/original/c_coaching_classes_surat_ciytlight_piplod.jpg"):
+  actionpack (4.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.11) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.11) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.11) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.11) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.11) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.11) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.11) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.11) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.11) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.11) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.11) lib/rails/engine.rb:518:in `call'
+  railties (4.2.11) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+  puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+  puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+  puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/routes/_route.html.erb (20.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/routes/_table.html.erb (60.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (8468.3ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (3394.8ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (7825.3ms)

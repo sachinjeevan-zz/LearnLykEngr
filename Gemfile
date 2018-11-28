@@ -10,6 +10,15 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'mime-types'
+ gem 'mini_magick'
+  gem 'rmagick'
+  gem 'carrierwave'
+  gem 'carrierwave-video'
+  gem 'carrierwave-video-thumbnailer'
+   gem 'carrierwave-ffmpeg'
+
+
 gem 'materialize-sass'
 gem 'devise', '~> 3.4.1'
 gem 'toastr-rails'
