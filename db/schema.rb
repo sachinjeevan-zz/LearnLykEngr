@@ -59,8 +59,21 @@ ActiveRecord::Schema.define(version: 20181124193713) do
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
 
-# Could not dump table "projects" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  create_table "projects", force: :cascade do |t|
+    t.string   "name"
+    t.text     "content"
+    t.integer  "price"
+    t.string   "promo"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "slug"
+  end
+
+  add_index "projects", ["slug"], name: "index_projects_on_slug", unique: true
 
   create_table "subscriptions", force: :cascade do |t|
     t.integer  "project_id"
