@@ -5,7 +5,7 @@ class CreateTasks < ActiveRecord::Migration
       t.text :note
       t.string :video
       t.boolean :header, :null => false, :default => false
-      t.string :tag
+      t.integer :tag
       t.references :project, index: true
 
       t.timestamps null: false
