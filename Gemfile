@@ -1,11 +1,6 @@
 source 'https://rubygems.org'
 
-git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
-end
-
-gem 'rails'
+gem 'rails', '4.2.4'
 gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -39,11 +34,10 @@ gem 'html-pipeline',  '~> 1.11.0'
 gem 'github-markdown', '~> 0.6.7'
 gem 'gemoji', '~> 2.1.0'
 gem 'sanitize', '~> 3.0.3'
-gem 'pg', '~> 0.20.0'
-   gem 'rails_12factor'
+
+
 group :production do
-  gem 'pg', '~> 0.20.0'
-   gem 'rails_12factor'
+   gem 'pg', '~> 0.18.1'
  end
 
 
